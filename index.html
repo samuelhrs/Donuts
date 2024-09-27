@@ -126,7 +126,10 @@ const enviarPedidos = (event) => {
         body: JSON.stringify({
             Nome, Contato, Massa, Recheio, Quantidade, Data, Observacoes
         })
-    }).then(() => removeloading(), alert("Enviado com Sucesso, Obrigado pelo seu Pedido =D"));
+    }).then(() => 
+     removeloading(),
+     alert("Enviado com Sucesso, Obrigado pelo seu Pedido =D"),
+     document.querySelector('form').reset());
 }
 
 document.querySelector('form').addEventListener('submit', enviarPedidos);
